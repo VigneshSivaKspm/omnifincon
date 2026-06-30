@@ -8,6 +8,7 @@ const NAV_LINKS = [
   { label: "Services",    href: "/services",         hasDropdown: true  },
   { label: "About",       href: "/about",            hasDropdown: true  },
   { label: "Calculators", href: "/calculators",      hasDropdown: false },
+  { label: "Blog",        href: "/blog",             hasDropdown: false },
   { label: "Insights",    href: "/insights",         hasDropdown: false },
   { label: "Partners",    href: "/lending-partners", hasDropdown: false },
 ];
