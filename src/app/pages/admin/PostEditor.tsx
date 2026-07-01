@@ -629,8 +629,8 @@ export default function PostEditor() {
       <style>{`
         @keyframes slideIn { from { opacity: 0; transform: translateY(-12px); } to { opacity: 1; transform: translateY(0); } }
         @keyframes spin { to { transform: rotate(360deg); } }
-        .blog-content { font-family: 'Inter', sans-serif; color: #536280; line-height: 1.85; font-size: 0.95rem; }
-        .blog-content h1, .blog-content h2, .blog-content h3, .blog-content h4 { font-family: 'Playfair Display', serif; color: #0B1A2E; font-weight: 700; margin: 1.5rem 0 0.75rem; }
+        .blog-content { font-family: 'Poppins', sans-serif; color: #536280; line-height: 1.85; font-size: 0.95rem; }
+        .blog-content h1, .blog-content h2, .blog-content h3, .blog-content h4 { font-family: 'Poppins', sans-serif; color: #0B1A2E; font-weight: 700; margin: 1.5rem 0 0.75rem; }
         .blog-content h2 { font-size: 1.4rem; }
         .blog-content h3 { font-size: 1.15rem; }
         .blog-content p { margin-bottom: 1.2rem; }
@@ -641,7 +641,7 @@ export default function PostEditor() {
         .blog-content a { color: ${G}; text-decoration: underline; }
         .blog-content img { max-width: 100%; border-radius: 10px; margin: 1rem 0; }
         .blog-content hr { border: none; border-top: 1px solid rgba(11,26,46,0.09); margin: 1.5rem 0; }
-        select option { font-family: 'Inter', sans-serif; }
+        select option { font-family: 'Poppins', sans-serif; }
       `}</style>
     </div>
   );

@@ -237,9 +237,9 @@ export default function BlogPost() {
 
       {/* Global blog content styles */}
       <style>{`
-        .blog-content { font-family: 'Inter', sans-serif; color: #536280; line-height: 1.85; font-size: 1rem; }
+        .blog-content { font-family: 'Poppins', sans-serif; color: #536280; line-height: 1.85; font-size: 1rem; }
         .blog-content h1, .blog-content h2, .blog-content h3, .blog-content h4 {
-          font-family: 'Playfair Display', serif; color: #0B1A2E; font-weight: 700; margin: 2rem 0 1rem;
+          font-family: 'Poppins', sans-serif; color: #0B1A2E; font-weight: 700; margin: 2rem 0 1rem;
         }
         .blog-content h1 { font-size: clamp(1.6rem, 3vw, 2.2rem); }
         .blog-content h2 { font-size: clamp(1.3rem, 2.5vw, 1.75rem); }
@@ -260,7 +260,7 @@ export default function BlogPost() {
         .blog-content pre { background: #0B1A2E; color: #e2e8f0; padding: 20px; border-radius: 12px; overflow-x: auto; margin: 1.5rem 0; }
         .blog-content table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
         .blog-content th, .blog-content td { padding: 10px 14px; text-align: left; border-bottom: 1px solid rgba(11,26,46,0.09); }
-        .blog-content th { font-weight: 700; color: #0B1A2E; font-family: 'Inter', sans-serif; }
+        .blog-content th { font-weight: 700; color: #0B1A2E; font-family: 'Poppins', sans-serif; }
       `}</style>
     </>
   );

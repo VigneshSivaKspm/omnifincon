@@ -17,16 +17,16 @@ import { RevealWrapper, useScrollReveal, useCounter, Pill, SectionHeader, GlowBu
 
 const SERVICES = [
   { num: "01", icon: TrendingUp, title: "Investment Banking",      tag: "Capital Markets", color: G,
-    desc: "Fundraising, Debt Syndication, M&A Advisory, and Structured Finance for all sectors.",
+    desc: "Fund Raising (Debt & Equity), HNI Funding, M&A Advisory, Project Finance, Structured Finance, Bridge Financing, and SME/MSME Solutions.",
     href: "/services/investment-banking" },
-  { num: "02", icon: Shield,     title: "Wealth & Risk Advisory",  tag: "Wealth",          color: BLUE,
-    desc: "Comprehensive wealth management, insurance advisory, and risk-optimised portfolio solutions.",
+  { num: "02", icon: Shield,     title: "Wealth & Asset Management", tag: "Wealth",        color: BLUE,
+    desc: "Private Wealth Advisory for UHNIs & Family Offices, Alternative Investments (AIF), Pre-IPO Opportunities, and Legacy & Succession Planning.",
     href: "/services/wealth-advisory" },
-  { num: "03", icon: Building2,  title: "Land & Real Estate",      tag: "Real Estate",     color: GOLD,
-    desc: "Expert advisory in Land Acquisition, JV Structuring, Title Due Diligence, and Asset Monetization.",
+  { num: "03", icon: Building2,  title: "Real Estate Advisory",    tag: "Real Estate",     color: GOLD,
+    desc: "Real Estate Capital Markets, Land & Asset Transactions, Project Finance & JVs, Lease Rental Discounting, and Asset Monetization Strategies.",
     href: "/services/real-estate-advisory" },
   { num: "04", icon: CreditCard, title: "Retail Banking & Credit", tag: "Banking",         color: PURPLE,
-    desc: "Personal & Business Loans, Credit Structuring, and comprehensive Liability Mobilization.",
+    desc: "Home Loans, Business Loans, Loan Against Property, Loan Against Securities, and comprehensive Credit Structuring solutions.",
     href: "/services/retail-banking" },
 ];
 
@@ -90,18 +90,18 @@ const BENEFITS = [
 
 function HeroStats() {
   const { ref, visible } = useScrollReveal();
-  const aum   = useCounter(4800, 1800, visible);
-  const deals = useCounter(340,  1600, visible);
-  const rate  = useCounter(94,   1400, visible);
-  const years = useCounter(15,   1200, visible);
+  const fin  = useCounter(20,   1800, visible);
+  const proj = useCounter(1000, 1600, visible);
+  const prof = useCounter(50,   1400, visible);
+  const exp  = useCounter(200,  1200, visible);
 
   return (
     <div ref={ref} className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-10">
       {[
-        { val: `₹${aum}Cr+`, label: "AUM Advised" },
-        { val: `${deals}+`,  label: "Deals Closed" },
-        { val: `${rate}.7%`, label: "Success Rate" },
-        { val: `${years}+`,  label: "Years of Leadership" },
+        { val: `₹${fin},000+ Cr`, label: "Structured Financing" },
+        { val: `${proj}+`,        label: "Projects Executed" },
+        { val: `${prof}+`,        label: "Dedicated Professionals" },
+        { val: `${exp}+`,         label: "Years of Combined Exp." },
       ].map((s, i) => (
         <div key={i} className="flex flex-col gap-1.5 py-4 px-5 rounded-2xl"
           style={{ background: "#FFFFFF", border: `1px solid ${SURF_BORDER}`, boxShadow: CARD_SHADOW }}>
@@ -150,9 +150,9 @@ function HeroDashboard() {
           {/* Metric cards */}
           <div className="grid grid-cols-3 gap-2.5">
             {[
-              { label: "AUM Advised",   value: "₹4,800 Cr", change: "+18.4%", icon: TrendingUp },
-              { label: "Transactions",  value: "340+",       change: "+22.1%", icon: BarChart3  },
-              { label: "Success Rate",  value: "94.7%",      change: "+3.2%",  icon: Target     },
+              { label: "Financing",   value: "₹20,000 Cr+", change: "+34.2% YoY",     icon: TrendingUp },
+              { label: "Projects",    value: "1,000+",       change: "+18.6% YoY",     icon: BarChart3  },
+              { label: "NPA Record",  value: "Zero",         change: "Since Inception", icon: Target     },
             ].map((m) => {
               const Icon = m.icon;
               return (
@@ -243,26 +243,25 @@ function Hero() {
         {/* Left */}
         <div className="flex flex-col gap-6">
           <RevealWrapper delay={0}>
-            <Pill color={G}><Sparkles size={10} /> India's Premier Financial Advisory</Pill>
+            <Pill color={G}><Sparkles size={10} /> Empowering Growth</Pill>
           </RevealWrapper>
 
           <RevealWrapper delay={100}>
-            <h1 style={{ fontFamily: FONT_SERIF, fontSize: "clamp(2.8rem,5.5vw,5rem)", fontWeight: 700, lineHeight: 1.06, color: TEXT1, letterSpacing: "-0.02em" }}>
-              Financial Advisory in{" "}
+            <h1 style={{ fontFamily: FONT_SERIF, fontSize: "clamp(2.8rem,5.5vw,4.8rem)", fontWeight: 700, lineHeight: 1.08, color: TEXT1, letterSpacing: "-0.02em" }}>
+              Access Capital.{" "}
               <span style={{
                 background: `linear-gradient(135deg,${G} 0%,#00C97A 50%,${G} 100%)`,
                 WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text",
-                fontStyle: "italic",
               }}>
-                Fund Raising,
+                Create Wealth.
               </span>{" "}
-              Wealth, Land & Retail Banking.
+              Invest Confidently.
             </h1>
           </RevealWrapper>
 
           <RevealWrapper delay={180}>
             <p style={{ fontFamily: FONT_SANS, fontSize: "1rem", color: TEXT2, lineHeight: 1.8, maxWidth: "520px" }}>
-              OMNI Fincon is India's integrated financial advisory firm — bridging clients with capital, structuring complex transactions, and building lasting wealth across four specialised verticals.
+              A boutique investment banking firm helping you access capital, accelerate growth, create wealth, and invest confidently for a secure and prosperous future.
             </p>
           </RevealWrapper>
 
@@ -296,8 +295,8 @@ function Hero() {
             <div className="flex items-center gap-4 flex-wrap mt-2">
               {[
                 { icon: CheckCircle2, text: "SEBI Registered" },
-                { icon: Award,        text: "15+ Years Legacy" },
-                { icon: Users,        text: "340+ Clients" },
+                { icon: Award,        text: "Zero NPA Record" },
+                { icon: Users,        text: "1,000+ Projects" },
               ].map((b) => {
                 const Icon = b.icon;
                 return (
@@ -417,9 +416,9 @@ function Services() {
 
 function AboutSection() {
   const { ref, visible } = useScrollReveal();
-  const years   = useCounter(15,  1600, visible);
-  const exp     = useCounter(200, 1800, visible);
-  const sectors = useCounter(30,  1400, visible);
+  const exp     = useCounter(200,  1800, visible);
+  const proj    = useCounter(1000, 1600, visible);
+  const prof    = useCounter(50,   1400, visible);
 
   return (
     <section id="about" className="py-24 lg:py-32" style={{ background: NAVY2 }}>
@@ -433,14 +432,14 @@ function AboutSection() {
                 title="Led by experts with"
                 titleAccent="200+ years"
                 accentColor={GOLD}
-                desc="OMNI Fincon brings together senior bankers, investment professionals, and sector specialists across India's most dynamic financial markets."
+                desc="OMNI Fincon brings together senior bankers, investment professionals, and sector specialists — backed by deep relationships across PSU banks, private banks, NBFCs, and family offices."
               />
             </RevealWrapper>
             <div ref={ref} className="grid grid-cols-3 gap-6 mt-10">
               {[
-                { val: `${years}+`,   label: "Years of Financial Leadership", color: G    },
-                { val: `${exp}+`,     label: "Years Cumulative Team Exp.",     color: GOLD },
-                { val: `${sectors}+`, label: "Sectors Served Across India",    color: BLUE },
+                { val: `${exp}+`,  label: "Years Cumulative Leadership", color: G    },
+                { val: `${proj}+`, label: "Projects Executed",           color: GOLD },
+                { val: `${prof}+`, label: "Dedicated Professionals",     color: BLUE },
               ].map((stat) => (
                 <div key={stat.label} className="flex flex-col gap-1">
                   <p style={{ fontFamily: FONT_NUM, fontSize: "2.4rem", fontWeight: 800, color: stat.color, lineHeight: 1, fontVariantNumeric: "tabular-nums", letterSpacing: "-0.02em" }}>
@@ -461,11 +460,11 @@ function AboutSection() {
           <div className="flex flex-col gap-4">
             {[
               { label: "Our Mission", icon: Target,  color: G,
-                body: "To deliver intelligent, customised financial solutions that empower individuals and businesses to build, protect, and multiply wealth." },
+                body: "To deliver intelligent, customized financial solutions that empower individuals and businesses to build, protect, and multiply wealth while contributing to long-term economic progress." },
               { label: "Our Vision",  icon: Globe,   color: BLUE,
                 body: "To be India's most trusted and agile financial institution, enabling sustainable growth through innovation, insight, and integrity." },
               { label: "Our Team",    icon: Users,   color: GOLD,
-                body: "Led by experts with 200+ years of cumulative experience — deeply networked across banks, NBFCs, family offices, and regulatory bodies." },
+                body: "200+ years of cumulative leadership experience across PSU banks, private equity, advisory, and regulatory bodies — with a flawless zero NPA track record." },
             ].map((card, i) => {
               const Icon = card.icon;
               return (
@@ -509,10 +508,10 @@ function InvestmentBanking() {
             <SectionHeader
               pill={<><TrendingUp size={10} /> Investment Banking</>}
               pillColor={G}
-              title="We offer Fund Raising,"
-              titleAccent="M&A & Structured Finance."
+              title="Fund Raising, M&A &"
+              titleAccent="Structured Finance."
               accentColor={G}
-              desc="Our Investment Banking vertical operates across the full capital structure — from senior secured debt to mezzanine and equity. ₹10 Cr to ₹2,000 Cr+ across 30+ sectors."
+              desc="Our Investment Banking vertical operates across the full capital structure — senior secured debt, mezzanine, and equity. Transactions from ₹10 Cr to ₹2,000 Cr+ executed across 30+ sectors."
             />
           </RevealWrapper>
           <RevealWrapper delay={200} className="mt-8 flex flex-wrap gap-3">
@@ -526,7 +525,7 @@ function InvestmentBanking() {
           <RevealWrapper delay={260} className="mt-10 flex items-center gap-4">
             <div style={{ width: "32px", height: "2px", background: G, borderRadius: "2px" }} />
             <p style={{ fontFamily: FONT_SANS, fontSize: "0.8rem", color: TEXT2 }}>
-              Trusted by 340+ clients across India's growth sectors
+              Trusted by 1,000+ projects across India's growth sectors
             </p>
           </RevealWrapper>
         </div>
@@ -787,13 +786,13 @@ function ChannelPartner() {
                 <p className="mb-7" style={{ fontFamily: FONT_SANS, fontSize: "0.82rem", color: TEXT2 }}>Complete the form — we respond within 2 business days.</p>
                 <form className="flex flex-col gap-5" onSubmit={e => { e.preventDefault(); setSubmitted(true); }}>
                   {[
-                    { label: "Full Name *",     type: "text"  },
-                    { label: "Email Address *", type: "email" },
-                    { label: "Phone Number *",  type: "tel"   },
+                    { label: "Full Name *",     type: "text",  id: "cp-name"  },
+                    { label: "Email Address *", type: "email", id: "cp-email" },
+                    { label: "Phone Number *",  type: "tel",   id: "cp-phone" },
                   ].map(f => (
                     <div key={f.label}>
-                      <label className="block text-xs mb-1.5 font-medium" style={{ fontFamily: FONT_SANS, color: TEXT2 }}>{f.label}</label>
-                      <input required type={f.type} className="w-full px-4 py-3 rounded-xl text-sm outline-none transition-all"
+                      <label htmlFor={f.id} className="block text-xs mb-1.5 font-medium" style={{ fontFamily: FONT_SANS, color: TEXT2 }}>{f.label}</label>
+                      <input id={f.id} required type={f.type} className="w-full px-4 py-3 rounded-xl text-sm outline-none transition-all"
                         style={{ background: "#F4F7FD", border: `1px solid ${SURF_BORDER}`, color: TEXT1, fontFamily: FONT_SANS }}
                         onFocus={e=>(e.target.style.border=`1px solid ${GOLD}50`)}
                         onBlur={e=>(e.target.style.border=`1px solid ${SURF_BORDER}`)} />
@@ -816,8 +815,8 @@ function ChannelPartner() {
                     </div>
                   </div>
                   <div>
-                    <label className="block text-xs mb-1.5 font-medium" style={{ fontFamily: FONT_SANS, color: TEXT2 }}>Your Experience (optional)</label>
-                    <textarea rows={3} className="w-full px-4 py-3 rounded-xl text-sm outline-none transition-all resize-none"
+                    <label htmlFor="cp-experience" className="block text-xs mb-1.5 font-medium" style={{ fontFamily: FONT_SANS, color: TEXT2 }}>Your Experience (optional)</label>
+                    <textarea id="cp-experience" rows={3} className="w-full px-4 py-3 rounded-xl text-sm outline-none transition-all resize-none"
                       style={{ background: "#F4F7FD", border: `1px solid ${SURF_BORDER}`, color: TEXT1, fontFamily: FONT_SANS }}
                       onFocus={e=>(e.target.style.border=`1px solid ${GOLD}50`)}
                       onBlur={e=>(e.target.style.border=`1px solid ${SURF_BORDER}`)} />
@@ -965,7 +964,7 @@ function CTABanner() {
             </a>
           </div>
           <div className="flex items-center justify-center gap-6 mt-10 flex-wrap">
-            {["₹4,800 Cr+ Advised","340+ Deals Closed","30+ Sectors","15+ Years"].map(t=>(
+            {["₹20,000+ Cr Financed","1,000+ Projects Executed","30+ Sectors","Zero NPA Record"].map(t=>(
               <div key={t} className="flex items-center gap-2" style={{ fontFamily: FONT_SANS, fontSize: "0.78rem", color: "rgba(255,255,255,0.75)" }}>
                 <Zap size={12} color="rgba(255,255,255,0.9)" /> {t}
               </div>
@@ -993,15 +992,17 @@ function FloatingButtons() {
       <a
         href="https://wa.me/919500063064?text=Hello%20OMNI%20Fincon%2C%20I%20would%20like%20to%20enquire%20about%20your%20financial%20advisory%20services."
         target="_blank" rel="noopener noreferrer"
+        aria-label="Chat with OMNI Fincon on WhatsApp"
         className="flex items-center gap-2 px-4 py-3 rounded-full font-semibold text-sm transition-all hover:scale-105 active:scale-95"
         style={{ background: "#25D366", color: "#FFF", fontFamily: FONT_SANS, boxShadow: "0 4px 20px rgba(37,211,102,0.4)" }}>
-        <MessageCircle size={16} />
+        <MessageCircle size={16} aria-hidden="true" />
         <span className="hidden sm:inline">WhatsApp</span>
       </a>
       <a href="tel:+919500063064"
+        aria-label="Call OMNI Fincon at +91 95000 63064"
         className="flex items-center gap-2 px-4 py-3 rounded-full font-semibold text-sm transition-all hover:scale-105 active:scale-95"
         style={{ background: G, color: "#FFF", fontFamily: FONT_SANS, boxShadow: `0 4px 20px ${G}40` }}>
-        <Phone size={16} />
+        <Phone size={16} aria-hidden="true" />
         <span className="hidden sm:inline">Call Us</span>
       </a>
     </div>

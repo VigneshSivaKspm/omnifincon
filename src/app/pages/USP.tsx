@@ -130,7 +130,7 @@ export default function USP() {
               Experience the <span style={{ color: G, fontStyle: "italic" }}>OMNI Advantage</span> Firsthand.
             </h2>
             <p className="mb-8" style={{ fontFamily: FONT_SANS, fontSize: "0.95rem", color: TEXT2, lineHeight: 1.75 }}>
-              Book a free consultation with our senior advisors and discover why 340+ clients have chosen OMNI Fincon.
+              Book a free consultation with our senior advisors and discover why 1,000+ projects have been executed with zero NPA track record.
             </p>
             <GlowButton color={G} href="/contact" size="lg">Book Free Consultation <ArrowRight size={15} /></GlowButton>
           </RevealWrapper>

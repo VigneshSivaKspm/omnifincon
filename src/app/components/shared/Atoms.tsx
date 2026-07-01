@@ -242,7 +242,7 @@ export function GlobalStyles() {
 
       input::placeholder, textarea::placeholder {
         color: #8BA2BA;
-        font-family: 'Inter', sans-serif;
+        font-family: 'Poppins', sans-serif;
       }
 
       * { box-sizing: border-box; }

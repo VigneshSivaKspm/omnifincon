@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OMNI Fincon — India's Premier Integrated Financial Advisory Firm</title>
-    <meta name="description" content="OMNI Fincon is India's premier integrated financial advisory firm specialising in Investment Banking, Wealth Management, Real Estate Advisory, and Retail Banking. 15+ years, ₹4,800 Cr+ advised, 340+ mandates closed." />
-    <meta name="keywords" content="investment banking, wealth management, debt syndication, real estate advisory, loan against property, project finance, NBFC advisory, Hyderabad financial advisory" />
+    <title>OMNI Fincon — Empowering Growth | India's Premier Boutique Investment Banking Firm</title>
+    <meta name="description" content="OMNI Fincon is India's premier boutique investment banking firm. ₹20,000+ Cr structured financing, 1,000+ projects executed, 200+ years cumulative leadership experience, zero NPA track record. Expert advisory in Investment Banking, Wealth Management, Real Estate & Retail Banking." />
+    <meta name="keywords" content="investment banking India, boutique investment banking, wealth management, debt syndication, real estate advisory, project finance, structured finance, NBFC advisory, Hyderabad financial advisory, fund raising" />
     <meta name="robots" content="index, follow" />
-    <meta property="og:title" content="OMNI Fincon — India's Premier Financial Advisory Firm" />
-    <meta property="og:description" content="15+ years of financial leadership. ₹4,800 Cr+ in mandates advised. 50+ lending partners. Expert advisory in Investment Banking, Wealth, Real Estate & Retail Credit." />
+    <meta property="og:title" content="OMNI Fincon — Empowering Growth | Boutique Investment Banking" />
+    <meta property="og:description" content="₹20,000+ Cr Structured Financing. 1,000+ Projects. 200+ Years Cumulative Leadership. Zero NPA Track Record. Expert advisory in Investment Banking, Wealth, Real Estate & Retail Credit." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="/Omni-Fincon-logo.png" />
     <meta name="theme-color" content="#FFFFFF" />
@@ -37,10 +37,19 @@
     <meta name="msapplication-square310x310logo" content="/ms-icon-310x310.png" />
     <meta name="application-name" content="OMNI Fincon" />
 
-    <!-- Google Fonts -->
+    <!-- Canonical -->
+    <link rel="canonical" href="https://omnifincon.vercel.app/" />
+
+    <!-- DNS prefetch for external services -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="https://firestore.googleapis.com" />
+    <link rel="dns-prefetch" href="https://storage.googleapis.com" />
+
+    <!-- Google Fonts — preconnect + swap for fast text render -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&display=swap" rel="stylesheet" />
 
     <style>
       *, *::before, *::after { box-sizing: border-box; }
@@ -48,6 +57,9 @@
       #root { height: 100%; }
       input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%; background: transparent; cursor: pointer; }
       input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: transparent; cursor: pointer; border: none; }
+      /* Critical: prevents FOUC before React hydrates */
+      body { font-family: 'Poppins', sans-serif; color: #0B1A2E; overflow-x: hidden; }
+      @keyframes spin { to { transform: rotate(360deg); } }
     </style>
   </head>
   <body>

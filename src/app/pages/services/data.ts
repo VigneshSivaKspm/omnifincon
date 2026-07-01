@@ -22,8 +22,8 @@ export const SERVICES_DATA: Record<string, ServiceItem> = {
     tagline: "Full-Spectrum Capital Solutions for India's Growth Sectors.",
     heroDesc: "From senior secured debt to mezzanine and equity — OMNI Fincon's Investment Banking vertical structures bespoke capital solutions for promoters, corporates, and institutional clients across 30+ sectors.",
     stats: [
-      { value: "₹4,800 Cr+", label: "Total Mandates Advised" },
-      { value: "340+",       label: "Successful Closures"    },
+      { value: "₹20,000 Cr+", label: "Structured Financing"   },
+      { value: "1,000+",     label: "Projects Executed"      },
       { value: "45 Days",    label: "Avg. Mandate-to-Close"  },
       { value: "30+",        label: "Sectors Served"         },
     ],
@@ -170,8 +170,8 @@ export const SERVICES_DATA: Record<string, ServiceItem> = {
     tagline: "Strategic Capital Mobilisation Across Debt, Equity, and Hybrid Instruments.",
     heroDesc: "OMNI Fincon provides end-to-end fund raising advisory — from preparation of investment memorandums to lender relationship management and financial close — for promoters, developers, and corporates across India.",
     stats: [
-      { value: "₹4,800 Cr+", label: "Capital Raised"          },
-      { value: "200+",        label: "Fund Raise Mandates"     },
+      { value: "₹20,000 Cr+", label: "Capital Structured"      },
+      { value: "1,000+",     label: "Projects Executed"       },
       { value: "50+",         label: "Lender Relationships"    },
       { value: "30 Days",     label: "Avg. First Term Sheet"   },
     ],

@@ -51,10 +51,10 @@ export default function ServicesHub() {
         <div className="max-w-[1320px] mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { val: "16+",        label: "Financial Services"     },
-              { val: "₹4,800 Cr+", label: "Total Mandates Advised" },
-              { val: "340+",       label: "Successful Closures"    },
-              { val: "30+",        label: "Sectors Covered"        },
+              { val: "16+",            label: "Financial Services"         },
+              { val: "₹20,000 Cr+",  label: "Structured Financing"       },
+              { val: "1,000+",        label: "Projects Executed"          },
+              { val: "30+",           label: "Sectors Covered"            },
             ].map((s, i) => (
               <div key={i} className="text-center">
                 <p style={{ fontFamily: FONT_NUM, fontSize: "2rem", fontWeight: 800, color: G, lineHeight: 1, fontVariantNumeric: "tabular-nums", letterSpacing: "-0.02em" }}>{s.val}</p>

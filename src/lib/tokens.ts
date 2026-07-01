@@ -21,9 +21,9 @@ export const TEXT2  = "#536280";   // Secondary text (slate blue-gray)
 export const TEXT3  = "#8BA2BA";   // Muted text
 
 // ── Font Families ────────────────────────────────────────────────────────────
-export const FONT_SERIF = "'Playfair Display', serif";
-export const FONT_SANS  = "'Inter', sans-serif";
-export const FONT_NUM   = "'Inter', sans-serif";       // Lining figures for financial numbers (no old-style descenders)
+export const FONT_SERIF = "'Poppins', sans-serif";
+export const FONT_SANS  = "'Poppins', sans-serif";
+export const FONT_NUM   = "'Poppins', sans-serif";
 export const FONT_MONO  = "'JetBrains Mono', 'Fira Code', monospace";
 
 // ── Surface & Card Tokens ─────────────────────────────────────────────────────
@@ -88,14 +88,15 @@ export const ABOUT_NAV = [
 
 export const OFFICES = [
   { city: "Hyderabad", address: "Building Number 9, Mindspace, HITEC City, Hyderabad, Telangana 500081", phone: "+91 95000 63064" },
-  { city: "Mumbai",    address: "508, Upper Ground Floor, World Trade Center, Ring Road, Surat",          phone: "+91 95000 63064" },
+  { city: "Surat",     address: "508, Upper Ground Floor, World Trade Center, Ring Road, Surat",          phone: "+91 95000 63064" },
   { city: "Vadodara",  address: "606, KP Platina, Opp. Vanijya Bhavan, Race Course Circle, Vadodara",    phone: "+91 95000 63064" },
   { city: "Ahmedabad", address: "301, Shaival Imperia, Opp. Nalanda Hotel, Mithakhali Six Roads, Ahmedabad", phone: "+91 95000 63064" },
 ];
 
 export const PARTNERS = [
-  "Aditya Birla Capital", "Bajaj Finance", "Bank of Baroda",
-  "HDFC Bank", "ICICI Bank", "IIFL Finance", "Kotak Mahindra Bank",
-  "Piramal Finance", "State Bank of India", "Tata Capital",
-  "Axis Bank", "Yes Bank", "IndusInd Bank", "Federal Bank",
+  "State Bank of India", "Bank of Baroda", "HDFC Bank",
+  "ICICI Bank", "Kotak Mahindra Bank", "Tata Capital",
+  "Bajaj Finserv", "IIFL Finance", "Aditya Birla Capital",
+  "Piramal Finance", "Axis Bank", "IndusInd Bank",
+  "Yes Bank", "Federal Bank", "Punjab National Bank",
 ];

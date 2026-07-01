@@ -14,12 +14,13 @@ const NAV_LINKS = [
 ];
 
 const TICKER_ITEMS = [
-  "India's Premier Integrated Financial Advisory",
-  "₹4,800 Cr+ in Mandates Advised",
-  "50+ Institutional Lending Partners",
-  "15+ Years of Financial Leadership",
-  "340+ Successful Mandates Closed",
-  "Pan-India Presence — 4 Major Cities",
+  "Empowering Growth — India's Boutique Investment Banking Firm",
+  "₹20,000+ Cr Structured Financing",
+  "25+ Institutional Banking & NBFC Partners",
+  "200+ Years Cumulative Leadership Experience",
+  "1,000+ Projects Successfully Executed",
+  "Zero NPA Track Record Since Inception",
+  "Pan-India Presence — 5 Offices",
 ];
 
 export default function Navbar() {
@@ -178,6 +179,9 @@ export default function Navbar() {
             <button
               className="lg:hidden p-2 rounded-xl transition-all"
               style={{ color: TEXT1 }}
+              aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
+              aria-expanded={mobileOpen}
+              aria-controls="mobile-nav"
               onMouseEnter={e => (e.currentTarget as HTMLElement).style.background = "rgba(11,26,46,0.06)"}
               onMouseLeave={e => (e.currentTarget as HTMLElement).style.background = "transparent"}
               onClick={() => setMobileOpen(!mobileOpen)}>
@@ -188,7 +192,7 @@ export default function Navbar() {
 
         {/* ── Mobile menu ── */}
         {mobileOpen && (
-          <div className="lg:hidden" style={{ background: "#FFFFFF", borderTop: `1px solid ${SURF_BORDER}`, maxHeight: "82vh", overflowY: "auto" }}>
+          <div id="mobile-nav" className="lg:hidden" style={{ background: "#FFFFFF", borderTop: `1px solid ${SURF_BORDER}`, maxHeight: "82vh", overflowY: "auto" }}>
             <div className="px-5 py-5 flex flex-col gap-0">
               {NAV_LINKS.map((link) => {
                 const hasDD = link.hasDropdown;

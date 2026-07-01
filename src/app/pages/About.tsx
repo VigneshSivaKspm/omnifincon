@@ -3,12 +3,12 @@ import { G, GOLD, BLUE, PURPLE, NAVY, NAVY2, TEXT1, TEXT2, FONT_SANS, FONT_SERIF
 import { RevealWrapper, useScrollReveal, useCounter, Pill, SectionHeader, GlowButton, GradientCard, PageHero } from "../components/shared/Atoms";
 
 const TIMELINE = [
-  { year: "2009", title: "Founded", desc: "OMNI Fincon established with a vision to democratise access to institutional-grade financial advisory for Indian businesses." },
-  { year: "2012", title: "First Major Mandate", desc: "Closed first ₹100 Cr+ debt syndication mandate, establishing our credibility in the investment banking space." },
-  { year: "2015", title: "Expansion to 4 Cities", desc: "Opened offices in Mumbai, Vadodara, and Ahmedabad to serve Gujarat's thriving industrial ecosystem." },
-  { year: "2018", title: "₹1,000 Cr Milestone", desc: "Crossed ₹1,000 Cr in cumulative mandates advised — a significant milestone in our growth journey." },
-  { year: "2021", title: "Retail Banking Launch", desc: "Launched dedicated Retail Banking & Credit vertical to serve individual and MSME credit needs." },
-  { year: "2024", title: "₹4,800 Cr+ Advised", desc: "Crossed ₹4,800 Cr in total mandates advised with 340+ successful closures across 30+ sectors." },
+  { year: "2009", title: "Founded in Hyderabad", desc: "OMNI Fincon established by senior banking professionals with a vision to democratise access to institutional-grade financial advisory for Indian businesses." },
+  { year: "2012", title: "First Major Mandate", desc: "Closed first ₹100 Cr+ debt syndication mandate, establishing our credibility with PSU banks and institutional lenders." },
+  { year: "2015", title: "Pan-India Expansion", desc: "Opened offices in Mumbai, Vadodara, and Ahmedabad to serve Gujarat's thriving industrial ecosystem and western India." },
+  { year: "2018", title: "₹5,000 Cr Milestone", desc: "Crossed ₹5,000 Cr in cumulative structured financing — a significant milestone reflecting client trust and execution excellence." },
+  { year: "2021", title: "Retail & Wealth Launch", desc: "Launched dedicated Retail Banking & Credit and Wealth & Asset Management verticals for HNIs, UHNIs, and MSMEs." },
+  { year: "2024", title: "₹20,000 Cr+ & 5 Offices", desc: "Crossed ₹20,000 Cr in structured financing with 1,000+ projects executed across 30+ sectors — zero NPAs maintained throughout." },
 ];
 
 const VALUES = [
@@ -24,10 +24,10 @@ const VALUES = [
 
 export default function About() {
   const { ref, visible } = useScrollReveal();
-  const years   = useCounter(15,  1600, visible);
-  const deals   = useCounter(340, 1800, visible);
-  const sectors = useCounter(30,  1400, visible);
-  const exp     = useCounter(200, 2000, visible);
+  const exp     = useCounter(200,  1600, visible);
+  const proj    = useCounter(1000, 1800, visible);
+  const sectors = useCounter(30,   1400, visible);
+  const prof    = useCounter(50,   2000, visible);
 
   return (
     <>
@@ -37,7 +37,7 @@ export default function About() {
         title="Empowering Growth Through"
         titleAccent="Financial Excellence."
         accentColor={GOLD}
-        desc="OMNI Fincon is India's premier integrated financial advisory firm — built over 15 years of deep expertise, lasting relationships, and a relentless commitment to client outcomes."
+        desc="OMNI Fincon is India's premier boutique investment banking firm — built on 200+ years of cumulative leadership experience, a flawless zero NPA record, and a relentless commitment to client outcomes."
       />
 
       {/* ── Counter Stats ── */}
@@ -45,10 +45,10 @@ export default function About() {
         <div className="max-w-[1320px] mx-auto px-6 lg:px-10">
           <div ref={ref} className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { val: `${years}+`,   label: "Years of Leadership",      color: G      },
-              { val: `${deals}+`,   label: "Deals Closed",             color: GOLD   },
-              { val: `${sectors}+`, label: "Sectors Served",           color: BLUE   },
-              { val: `${exp}+`,     label: "Years Team Experience",    color: PURPLE },
+              { val: `${exp}+`,     label: "Years of Cumulative Leadership",  color: G      },
+              { val: `${proj}+`,    label: "Projects Executed",               color: GOLD   },
+              { val: `${sectors}+`, label: "Sectors Served",                  color: BLUE   },
+              { val: `${prof}+`,    label: "Dedicated Professionals",         color: PURPLE },
             ].map((s) => (
               <div key={s.label} className="text-center flex flex-col gap-2">
                 <p style={{ fontFamily: FONT_NUM, fontSize: "2.8rem", fontWeight: 800, color: s.color, lineHeight: 1, fontVariantNumeric: "tabular-nums", letterSpacing: "-0.02em" }}>
@@ -71,20 +71,20 @@ export default function About() {
               <SectionHeader
                 pill="Our Story"
                 pillColor={G}
-                title="15 Years of"
-                titleAccent="Financial Leadership."
+                title="A Legacy of"
+                titleAccent="Financial Excellence."
                 accentColor={G}
-                desc="Founded in 2009 by senior banking professionals with combined experience spanning PSU banks, private equity, and advisory firms, OMNI Fincon was built on a simple but powerful belief: every business deserves access to institutional-grade financial advisory."
+                desc="Founded by senior banking professionals with 200+ years of combined experience spanning PSU banks, private equity, and advisory firms, OMNI Fincon was built on one belief: every business deserves access to institutional-grade financial advisory."
               />
             </RevealWrapper>
             <RevealWrapper delay={100}>
               <p className="mt-5" style={{ fontFamily: FONT_SANS, fontSize: "0.93rem", color: TEXT2, lineHeight: 1.85 }}>
-                What began as a boutique investment banking practice in Hyderabad has grown into a pan-India integrated financial advisory firm with offices across four major cities, serving 340+ clients across 30+ sectors. Our journey has been defined by deep client relationships, innovative deal structures, and an unwavering commitment to outcomes over optics.
+                What began as a boutique investment banking practice in Hyderabad has grown into a pan-India integrated financial advisory firm with offices across five major cities, executing 1,000+ projects across 30+ sectors — with a flawless zero NPA track record. Our journey has been defined by deep client relationships, innovative deal structures, and an unwavering commitment to outcomes over optics.
               </p>
             </RevealWrapper>
             <RevealWrapper delay={160}>
               <p className="mt-4" style={{ fontFamily: FONT_SANS, fontSize: "0.93rem", color: TEXT2, lineHeight: 1.85 }}>
-                Today, OMNI Fincon advises across four verticals — Investment Banking, Wealth & Risk Advisory, Land & Real Estate Advisory, and Retail Banking & Credit — delivering cross-domain value that no single-vertical firm can match.
+                Today, OMNI Fincon advises across four verticals — Investment Banking, Wealth & Asset Management, Real Estate Advisory, and Retail Banking & Credit — delivering cross-domain value that no single-vertical firm can match.
               </p>
             </RevealWrapper>
             <RevealWrapper delay={220} className="mt-8">
@@ -131,9 +131,9 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12 max-w-4xl mx-auto">
             {[
               { label: "Our Mission", color: G,
-                text: "To deliver intelligent, customised financial solutions that empower individuals and businesses to build, protect, and multiply wealth while contributing to India's long-term economic progress." },
+                text: "To deliver intelligent, customized financial solutions that empower individuals and businesses to build, protect, and multiply wealth while contributing to long-term economic progress." },
               { label: "Our Vision", color: BLUE,
-                text: "To be India's most trusted and agile financial institution, enabling sustainable growth through innovation, insight, and integrity across all our service verticals." },
+                text: "To be India's most trusted and agile financial institution, enabling sustainable growth through innovation, insight, and integrity." },
             ].map((mv) => (
               <RevealWrapper key={mv.label}>
                 <div className="rounded-2xl p-8" style={{ background: `${mv.color}08`, border: `1px solid ${mv.color}25` }}>
@@ -184,6 +184,80 @@ export default function About() {
         </div>
       </section>
 
+      {/* ── 5-Step Methodology ── */}
+      <section className="py-20 lg:py-28" style={{ background: NAVY2 }}>
+        <div className="max-w-[1320px] mx-auto px-6 lg:px-10">
+          <RevealWrapper>
+            <SectionHeader
+              pill="Our Approach"
+              pillColor={G}
+              title="Our 5-Step"
+              titleAccent="Methodology."
+              accentColor={G}
+              center
+              desc="A structured, proven process that ensures every client engagement is executed with precision, compliance, and accountability."
+            />
+          </RevealWrapper>
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-0 mt-14 relative">
+            <div className="hidden md:block absolute top-10 left-[10%] right-[10%] h-px" style={{ background: `linear-gradient(to right,${G}30,${G}60,${G}30)` }} />
+            {[
+              { step: "01", title: "Requirement Understanding", desc: "Deep-dive into client needs, objectives, and financial position to define the optimal solution." },
+              { step: "02", title: "Structuring & Feasibility", desc: "Prepare detailed financial models, term structures, and feasibility assessments." },
+              { step: "03", title: "Credit Assessment & Legal Review", desc: "Internal credit evaluation and thorough legal compliance review before proceeding." },
+              { step: "04", title: "Sanction & Disbursement", desc: "Liaison with banks, NBFCs, and investors to achieve approval and seamless fund disbursement." },
+              { step: "05", title: "Ongoing Relationship Management", desc: "Post-funding monitoring, reporting, and proactive support for the client's continued growth." },
+            ].map((s, i) => (
+              <RevealWrapper key={i} delay={i * 100}>
+                <div className="flex flex-col items-center text-center px-3 gap-4 relative">
+                  <div className="w-20 h-20 rounded-full flex items-center justify-center shrink-0 relative z-10"
+                    style={{ background: `${G}12`, border: `2px solid ${G}35`, boxShadow: `0 0 0 6px ${G}08` }}>
+                    <span style={{ fontFamily: FONT_NUM, fontSize: "1.2rem", fontWeight: 800, color: G }}>{s.step}</span>
+                  </div>
+                  <div>
+                    <h3 style={{ fontFamily: FONT_SANS, fontSize: "0.85rem", fontWeight: 700, color: TEXT1, lineHeight: 1.35, marginBottom: "8px" }}>{s.title}</h3>
+                    <p style={{ fontFamily: FONT_SANS, fontSize: "0.78rem", color: TEXT2, lineHeight: 1.65 }}>{s.desc}</p>
+                  </div>
+                </div>
+              </RevealWrapper>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Future Initiatives ── */}
+      <section className="py-20 lg:py-28" style={{ background: NAVY }}>
+        <div className="max-w-[1320px] mx-auto px-6 lg:px-10">
+          <RevealWrapper>
+            <SectionHeader
+              pill="Road Ahead"
+              pillColor={GOLD}
+              title="Future"
+              titleAccent="Initiatives."
+              accentColor={GOLD}
+              desc="OMNI Fincon is poised for aggressive, sustainable expansion across verticals and geographies."
+            />
+          </RevealWrapper>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
+            {[
+              { label: "₹6,000 Cr Target",       color: G,      desc: "Yearly disbursement target driving disciplined, high-quality deal flow and structured financing growth." },
+              { label: "National Expansion 2026",  color: BLUE,   desc: "New offices in Bengaluru, Chennai, and Andhra Pradesh to strengthen pan-India advisory coverage." },
+              { label: "Fintech Platform 2026",    color: PURPLE, desc: "Proprietary digital platform to streamline client onboarding, deal tracking, and portfolio reporting." },
+              { label: "AIF Advisory Platform 2027", color: GOLD, desc: "Dedicated Alternative Investment Fund advisory platform for institutional and family office investors." },
+              { label: "Proprietary NBFC 2027",   color: G,      desc: "Launch of an in-house NBFC to provide direct lending solutions and strengthen the credit ecosystem." },
+              { label: "50+ Professionals",        color: BLUE,   desc: "Expanding to a team of 50+ seasoned professionals across banking, advisory, legal, and technology." },
+            ].map((item, i) => (
+              <RevealWrapper key={i} delay={i * 80}>
+                <div className="rounded-2xl p-7 h-full" style={{ background: `${item.color}07`, border: `1px solid ${item.color}22` }}>
+                  <div className="w-2 h-8 rounded-full mb-4" style={{ background: item.color }} />
+                  <h3 style={{ fontFamily: FONT_SANS, fontSize: "0.95rem", fontWeight: 700, color: TEXT1, marginBottom: "10px" }}>{item.label}</h3>
+                  <p style={{ fontFamily: FONT_SANS, fontSize: "0.83rem", color: TEXT2, lineHeight: 1.75 }}>{item.desc}</p>
+                </div>
+              </RevealWrapper>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── CTA ── */}
       <section className="py-20 relative overflow-hidden" style={{ background: NAVY2 }}>
         <div className="absolute inset-0 pointer-events-none"
@@ -191,7 +265,7 @@ export default function About() {
         <div className="max-w-3xl mx-auto px-6 text-center relative">
           <RevealWrapper>
             <h2 style={{ fontFamily: FONT_SERIF, fontSize: "clamp(1.8rem,3vw,2.6rem)", fontWeight: 700, color: TEXT1, lineHeight: 1.15, marginBottom: "16px" }}>
-              Ready to Partner with <span style={{ color: G, fontStyle: "italic" }}>OMNI Fincon?</span>
+              Ready to Partner with <span style={{ color: G }}>OMNI Fincon?</span>
             </h2>
             <p className="mb-8" style={{ fontFamily: FONT_SANS, fontSize: "0.95rem", color: TEXT2, lineHeight: 1.75 }}>
               Experience the OMNI advantage — deep expertise, genuine relationships, and an unwavering commitment to your financial success.
