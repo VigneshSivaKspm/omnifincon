@@ -96,16 +96,16 @@ function HeroStats() {
   const exp  = useCounter(200,  1200, visible);
 
   return (
-    <div ref={ref} className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-10">
+    <div ref={ref} className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-0">
       {[
-        { val: `₹${fin},000+ Cr`, label: "Structured Financing" },
-        { val: `${proj}+`,        label: "Projects Executed" },
-        { val: `${prof}+`,        label: "Dedicated Professionals" },
-        { val: `${exp}+`,         label: "Years of Combined Exp." },
+        { val: `₹${fin},000+`, label: "Cr. Structured Financing" },
+        { val: `${proj}+`,     label: "Projects Executed" },
+        { val: `${prof}+`,     label: "Dedicated Professionals" },
+        { val: `${exp}+`,      label: "Years of Combined Exp." },
       ].map((s, i) => (
-        <div key={i} className="flex flex-col gap-1.5 py-4 px-5 rounded-2xl"
+        <div key={i} className="flex flex-col gap-2 py-5 px-6 rounded-2xl"
           style={{ background: "#FFFFFF", border: `1px solid ${SURF_BORDER}`, boxShadow: CARD_SHADOW }}>
-          <span style={{ fontFamily: FONT_NUM, fontSize: "1.8rem", fontWeight: 800, color: G, lineHeight: 1, fontVariantNumeric: "tabular-nums", letterSpacing: "-0.02em" }}>
+          <span style={{ fontFamily: FONT_NUM, fontSize: "clamp(1.5rem, 2.2vw, 2rem)", fontWeight: 800, color: G, lineHeight: 1, fontVariantNumeric: "tabular-nums", letterSpacing: "-0.02em", whiteSpace: "nowrap" }}>
             {s.val}
           </span>
           <span style={{ fontFamily: FONT_SANS, fontSize: "0.68rem", color: TEXT2, textTransform: "uppercase", letterSpacing: "0.12em" }}>
@@ -223,7 +223,8 @@ function HeroDashboard() {
 
 function Hero() {
   return (
-    <section className="relative flex items-center overflow-hidden" style={{ minHeight: "100vh", paddingTop: "104px", background: NAVY }}>
+    <section className="relative overflow-hidden" style={{ minHeight: "100vh", paddingTop: "104px", background: NAVY }}>
+      {/* Background decorations */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div style={{
           position: "absolute", inset: 0,
@@ -239,84 +240,91 @@ function Hero() {
         }} />
       </div>
 
-      <div className="relative max-w-[1320px] mx-auto px-6 lg:px-10 w-full py-20 lg:py-28 grid lg:grid-cols-2 gap-16 items-center">
-        {/* Left */}
-        <div className="flex flex-col gap-6">
-          <RevealWrapper delay={0}>
-            <Pill color={G}><Sparkles size={10} /> Empowering Growth</Pill>
-          </RevealWrapper>
+      {/* Single flex-col container — stacks hero content then stats */}
+      <div className="relative max-w-[1320px] mx-auto px-6 lg:px-10 w-full flex flex-col justify-center" style={{ minHeight: "calc(100vh - 104px)" }}>
 
-          <RevealWrapper delay={100}>
-            <h1 style={{ fontFamily: FONT_SERIF, fontSize: "clamp(2.8rem,5.5vw,4.8rem)", fontWeight: 700, lineHeight: 1.08, color: TEXT1, letterSpacing: "-0.02em" }}>
-              Access Capital.{" "}
-              <span style={{
-                background: `linear-gradient(135deg,${G} 0%,#00C97A 50%,${G} 100%)`,
-                WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text",
-              }}>
-                Create Wealth.
-              </span>{" "}
-              Invest Confidently.
-            </h1>
-          </RevealWrapper>
+        {/* Hero columns: text left, dashboard right */}
+        <div className="grid lg:grid-cols-2 gap-16 items-center py-16 lg:py-20">
+          {/* Left */}
+          <div className="flex flex-col gap-6">
+            <RevealWrapper delay={0}>
+              <Pill color={G}><Sparkles size={10} /> Empowering Growth</Pill>
+            </RevealWrapper>
 
-          <RevealWrapper delay={180}>
-            <p style={{ fontFamily: FONT_SANS, fontSize: "1rem", color: TEXT2, lineHeight: 1.8, maxWidth: "520px" }}>
-              A boutique investment banking firm helping you access capital, accelerate growth, create wealth, and invest confidently for a secure and prosperous future.
-            </p>
-          </RevealWrapper>
+            <RevealWrapper delay={100}>
+              <h1 style={{ fontFamily: FONT_SERIF, fontSize: "clamp(2.8rem,5.5vw,4.8rem)", fontWeight: 700, lineHeight: 1.08, color: TEXT1, letterSpacing: "-0.02em" }}>
+                Access Capital.{" "}
+                <span style={{
+                  background: `linear-gradient(135deg,${G} 0%,#00C97A 50%,${G} 100%)`,
+                  WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text",
+                }}>
+                  Create Wealth.
+                </span>{" "}
+                Invest Confidently.
+              </h1>
+            </RevealWrapper>
 
-          <RevealWrapper delay={240}>
-            <div className="flex items-center gap-2 flex-wrap" style={{ fontFamily: FONT_SANS, fontSize: "0.72rem", color: TEXT2, letterSpacing: "0.2em", fontWeight: 700, textTransform: "uppercase" }}>
-              {["Fund","Growth","Wealth","Invest"].map((w,i)=>(
-                <span key={w} className="flex items-center gap-2">
-                  <span style={{ color: G }}>{w}</span>
-                  {i<3 && <span style={{ color: "rgba(11,26,46,0.15)" }}>|</span>}
-                </span>
-              ))}
-            </div>
-          </RevealWrapper>
+            <RevealWrapper delay={180}>
+              <p style={{ fontFamily: FONT_SANS, fontSize: "1rem", color: TEXT2, lineHeight: 1.8, maxWidth: "520px" }}>
+                A boutique investment banking firm helping you access capital, accelerate growth, create wealth, and invest confidently for a secure and prosperous future.
+              </p>
+            </RevealWrapper>
 
-          <RevealWrapper delay={300}>
-            <div className="flex flex-wrap gap-4 mt-2">
-              <GlowButton color={G} href="/contact" size="lg">
-                Get in Touch <ArrowRight size={16} />
-              </GlowButton>
-              <a href="#services"
-                className="inline-flex items-center gap-2.5 rounded-full font-semibold text-sm transition-all"
-                style={{ padding: "14px 26px", border: `1px solid ${SURF_BORDER}`, color: TEXT1, fontFamily: FONT_SANS, background: "#F4F7FD", fontSize: "0.84rem" }}
-                onMouseEnter={e=>(e.currentTarget as HTMLElement).style.background="#EBF0F8"}
-                onMouseLeave={e=>(e.currentTarget as HTMLElement).style.background="#F4F7FD"}>
-                Explore Services <ChevronDown size={15} />
-              </a>
-            </div>
-          </RevealWrapper>
+            <RevealWrapper delay={240}>
+              <div className="flex items-center gap-2 flex-wrap" style={{ fontFamily: FONT_SANS, fontSize: "0.72rem", color: TEXT2, letterSpacing: "0.2em", fontWeight: 700, textTransform: "uppercase" }}>
+                {["Fund","Growth","Wealth","Invest"].map((w,i)=>(
+                  <span key={w} className="flex items-center gap-2">
+                    <span style={{ color: G }}>{w}</span>
+                    {i<3 && <span style={{ color: "rgba(11,26,46,0.15)" }}>|</span>}
+                  </span>
+                ))}
+              </div>
+            </RevealWrapper>
 
-          <RevealWrapper delay={360}>
-            <div className="flex items-center gap-4 flex-wrap mt-2">
-              {[
-                { icon: CheckCircle2, text: "SEBI Registered" },
-                { icon: Award,        text: "Zero NPA Record" },
-                { icon: Users,        text: "1,000+ Projects" },
-              ].map((b) => {
-                const Icon = b.icon;
-                return (
-                  <div key={b.text} className="flex items-center gap-1.5" style={{ fontFamily: FONT_SANS, fontSize: "0.73rem", color: TEXT2 }}>
-                    <Icon size={13} color={G} /> {b.text}
-                  </div>
-                );
-              })}
-            </div>
-          </RevealWrapper>
+            <RevealWrapper delay={300}>
+              <div className="flex flex-wrap gap-4 mt-2">
+                <GlowButton color={G} href="/contact" size="lg">
+                  Get in Touch <ArrowRight size={16} />
+                </GlowButton>
+                <a href="#services"
+                  className="inline-flex items-center gap-2.5 rounded-full font-semibold text-sm transition-all"
+                  style={{ padding: "14px 26px", border: `1px solid ${SURF_BORDER}`, color: TEXT1, fontFamily: FONT_SANS, background: "#F4F7FD", fontSize: "0.84rem" }}
+                  onMouseEnter={e=>(e.currentTarget as HTMLElement).style.background="#EBF0F8"}
+                  onMouseLeave={e=>(e.currentTarget as HTMLElement).style.background="#F4F7FD"}>
+                  Explore Services <ChevronDown size={15} />
+                </a>
+              </div>
+            </RevealWrapper>
 
-          <RevealWrapper delay={400}>
-            <HeroStats />
+            <RevealWrapper delay={360}>
+              <div className="flex items-center gap-4 flex-wrap mt-2">
+                {[
+                  { icon: CheckCircle2, text: "SEBI Registered" },
+                  { icon: Award,        text: "Zero NPA Record" },
+                  { icon: Users,        text: "1,000+ Projects" },
+                ].map((b) => {
+                  const Icon = b.icon;
+                  return (
+                    <div key={b.text} className="flex items-center gap-1.5" style={{ fontFamily: FONT_SANS, fontSize: "0.73rem", color: TEXT2 }}>
+                      <Icon size={13} color={G} /> {b.text}
+                    </div>
+                  );
+                })}
+              </div>
+            </RevealWrapper>
+          </div>
+
+          {/* Right — dark dashboard widget */}
+          <RevealWrapper delay={150} className="hidden lg:block">
+            <HeroDashboard />
           </RevealWrapper>
         </div>
 
-        {/* Right — dark dashboard widget (intentional dark premium accent) */}
-        <RevealWrapper delay={150} className="hidden lg:block">
-          <HeroDashboard />
+        {/* Stats row — full container width, below hero columns */}
+        <RevealWrapper delay={400} className="pb-16">
+          <HeroStats />
         </RevealWrapper>
+
       </div>
     </section>
   );
