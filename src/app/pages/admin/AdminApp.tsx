@@ -13,7 +13,7 @@ function ProtectedRoute({ children }: { children: React.ReactNode }) {
   if (loading) {
     return (
       <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", background: "#F4F7FD" }}>
-        <div style={{ width: 40, height: 40, borderRadius: "50%", border: "3px solid #00915A30", borderTopColor: "#00915A", animation: "spin 0.8s linear infinite" }} />
+        <div style={{ width: 40, height: 40, borderRadius: "50%", border: "3px solid #1351C830", borderTopColor: "#1351C8", animation: "spin 0.8s linear infinite" }} />
         <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
       </div>
     );

@@ -1,10 +1,11 @@
-// ─── OMNI Fincon Design Tokens — Premium Light Theme ─────────────────────────
+// ─── OMNI Fincon Design Tokens — Premium Corporate Theme ──────────────────────
 
 // ── Brand Accents ────────────────────────────────────────────────────────────
-export const G      = "#00915A";   // Professional emerald (readable on white)
-export const GOLD   = "#B87800";   // Warm gold (readable on white)
-export const BLUE   = "#1E5EE8";   // Royal blue
+export const G      = "#1351C8";   // Corporate royal blue (primary accent)
+export const GOLD   = "#B87800";   // Warm gold (secondary accent)
+export const BLUE   = "#1A74E8";   // Sky blue (lighter variant)
 export const PURPLE = "#6426C8";   // Violet
+export const TEAL   = "#0B7E8A";   // Professional teal (Insurance & Risk)
 
 // ── Backgrounds (Light Theme) ────────────────────────────────────────────────
 export const NAVY   = "#FFFFFF";   // Primary white background
@@ -40,7 +41,7 @@ export const BORDER_SUBTLE = SURF_BORDER;
 export const BORDER_MED    = SURF_BORDER_MED;
 
 // ── Green CTA Gradient ────────────────────────────────────────────────────────
-export const GREEN_GRAD = "linear-gradient(135deg, #007A4D 0%, #009960 50%, #00B870 100%)";
+export const GREEN_GRAD = "linear-gradient(135deg, #0B3E9A 0%, #1351C8 50%, #1A61D8 100%)";
 
 // ── Utility ──────────────────────────────────────────────────────────────────
 export function alpha(hex: string, opacity: number): string {
@@ -60,22 +61,19 @@ export const NAV_LINKS = [
 ];
 
 export const SERVICES_NAV = [
-  { label: "Investment Banking",      href: "/services/investment-banking",    color: G      },
-  { label: "Wealth & Risk Advisory",  href: "/services/wealth-advisory",       color: BLUE   },
-  { label: "Land & Real Estate",      href: "/services/real-estate-advisory",  color: GOLD   },
-  { label: "Retail Banking & Credit", href: "/services/retail-banking",        color: PURPLE },
-  { label: "Fund Raising",            href: "/services/fund-raising",          color: G      },
-  { label: "Debt Syndication",        href: "/services/debt-syndication",      color: BLUE   },
-  { label: "M&A Advisory",            href: "/services/ma-advisory",           color: GOLD   },
-  { label: "Project Finance",         href: "/services/project-finance",       color: PURPLE },
-  { label: "Structured Finance",      href: "/services/structured-finance",    color: G      },
-  { label: "NBFC / AIF Launch",       href: "/services/nbfc-aif-launch",       color: BLUE   },
-  { label: "MSME / SME Solutions",    href: "/services/msme-solutions",        color: GOLD   },
-  { label: "Personal Loan",           href: "/services/personal-loan",         color: PURPLE },
-  { label: "Business Loan",           href: "/services/business-loan",         color: G      },
-  { label: "Home Loan",               href: "/services/home-loan",             color: BLUE   },
-  { label: "Loan Against Property",   href: "/services/loan-against-property", color: GOLD   },
-  { label: "Working Capital Loan",    href: "/services/working-capital-loan",  color: PURPLE },
+  { label: "Investment Banking",          href: "/services/investment-banking",          color: G      },
+  { label: "Wealth & Asset Management",   href: "/services/wealth-advisory",             color: BLUE   },
+  { label: "Insurance & Risk Management", href: "/services/insurance-risk-management",   color: TEAL   },
+  { label: "Real Estate Advisory",        href: "/services/real-estate-advisory",        color: GOLD   },
+  { label: "Retail Banking",              href: "/services/retail-banking",              color: PURPLE },
+  { label: "Fund Raising",                href: "/services/fund-raising",                color: G      },
+  { label: "M&A Advisory",               href: "/services/ma-advisory",                 color: BLUE   },
+  { label: "Project Finance",             href: "/services/project-finance",             color: TEAL   },
+  { label: "Structured Finance",          href: "/services/structured-finance",          color: GOLD   },
+  { label: "SME / MSME",                  href: "/services/msme-solutions",              color: PURPLE },
+  { label: "Home Loan",                   href: "/services/home-loan",                   color: G      },
+  { label: "Business Loan",               href: "/services/business-loan",               color: BLUE   },
+  { label: "Loan Against Property",       href: "/services/loan-against-property",       color: GOLD   },
 ];
 
 export const ABOUT_NAV = [

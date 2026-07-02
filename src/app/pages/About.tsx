@@ -7,7 +7,7 @@ const TIMELINE = [
   { year: "2012", title: "First Major Mandate", desc: "Closed first ₹100 Cr+ debt syndication mandate, establishing our credibility with PSU banks and institutional lenders." },
   { year: "2015", title: "Pan-India Expansion", desc: "Opened offices in Mumbai, Vadodara, and Ahmedabad to serve Gujarat's thriving industrial ecosystem and western India." },
   { year: "2018", title: "₹5,000 Cr Milestone", desc: "Crossed ₹5,000 Cr in cumulative structured financing — a significant milestone reflecting client trust and execution excellence." },
-  { year: "2021", title: "Retail & Wealth Launch", desc: "Launched dedicated Retail Banking & Credit and Wealth & Asset Management verticals for HNIs, UHNIs, and MSMEs." },
+  { year: "2021", title: "Retail & Wealth Launch", desc: "Launched dedicated Retail Banking, Wealth & Asset Management, and Insurance & Risk Management verticals for HNIs, UHNIs, and MSMEs." },
   { year: "2024", title: "₹20,000 Cr+ & 5 Offices", desc: "Crossed ₹20,000 Cr in structured financing with 1,000+ projects executed across 30+ sectors — zero NPAs maintained throughout." },
 ];
 
@@ -84,7 +84,7 @@ export default function About() {
             </RevealWrapper>
             <RevealWrapper delay={160}>
               <p className="mt-4" style={{ fontFamily: FONT_SANS, fontSize: "0.93rem", color: TEXT2, lineHeight: 1.85 }}>
-                Today, OMNI Fincon advises across four verticals — Investment Banking, Wealth & Asset Management, Real Estate Advisory, and Retail Banking & Credit — delivering cross-domain value that no single-vertical firm can match.
+                Today, OMNI Fincon advises across five verticals — Investment Banking, Wealth & Asset Management, Insurance & Risk Management, Real Estate Advisory, and Retail Banking — delivering cross-domain value that no single-vertical firm can match.
               </p>
             </RevealWrapper>
             <RevealWrapper delay={220} className="mt-8">

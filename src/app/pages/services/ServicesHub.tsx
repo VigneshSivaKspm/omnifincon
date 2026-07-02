@@ -1,27 +1,27 @@
 import { Link } from "react-router";
 import { ArrowRight } from "lucide-react";
-import { G, GOLD, BLUE, PURPLE, NAVY, NAVY2, TEXT1, TEXT2, FONT_SANS, FONT_SERIF, FONT_NUM, SURF_BORDER } from "../../../lib/tokens";
+import { G, GOLD, BLUE, PURPLE, TEAL, NAVY, NAVY2, TEXT1, TEXT2, FONT_SANS, FONT_SERIF, FONT_NUM, SURF_BORDER } from "../../../lib/tokens";
 import { RevealWrapper, Pill, SectionHeader, GlowButton, GradientCard, PageHero } from "../../components/shared/Atoms";
 import { SERVICES_DATA } from "./data";
 
 const CATEGORIES = [
   {
-    title: "Investment & Capital Markets",
+    title: "Investment Banking",
     color: G,
-    desc: "End-to-end capital structuring and fund raising across debt, equity, and hybrid instruments.",
-    slugs: ["investment-banking","fund-raising","debt-syndication","ma-advisory","project-finance","structured-finance"],
+    desc: "Full-spectrum capital solutions — Fund Raising, M&A Advisory, Project Finance, Structured Finance, Bridge Financing, and SME/MSME for India's growth sectors.",
+    slugs: ["investment-banking","fund-raising","ma-advisory","project-finance","structured-finance","msme-solutions"],
   },
   {
-    title: "Advisory & Consulting",
-    color: GOLD,
-    desc: "Specialised advisory for real estate, wealth management, NBFC/AIF launch, and MSME financing.",
-    slugs: ["real-estate-advisory","wealth-advisory","nbfc-aif-launch","msme-solutions"],
+    title: "Wealth, Insurance & Real Estate",
+    color: TEAL,
+    desc: "Protecting and growing your legacy — Private Wealth Advisory, Alternative Investments, Insurance & Risk Management, and Real Estate Capital solutions.",
+    slugs: ["wealth-advisory","insurance-risk-management","real-estate-advisory"],
   },
   {
-    title: "Retail Banking & Credit",
-    color: BLUE,
-    desc: "Individual and business credit products — from personal loans to working capital facilities.",
-    slugs: ["personal-loan","business-loan","home-loan","loan-against-property","working-capital-loan","retail-banking"],
+    title: "Retail Banking",
+    color: PURPLE,
+    desc: "Complete solutions for personal and business growth — Home Loans, Business Loans, Loan Against Property, and Loan Against Securities.",
+    slugs: ["retail-banking","home-loan","business-loan","loan-against-property"],
   },
 ];
 
@@ -31,10 +31,10 @@ export default function ServicesHub() {
       <PageHero
         pill="All Services"
         pillColor={G}
-        title="16 Financial Services."
-        titleAccent="One Integrated Firm."
+        title="5 Integrated Services."
+        titleAccent="One Trusted Firm."
         accentColor={G}
-        desc="OMNI Fincon's comprehensive suite of financial services covers every stage of your growth journey — from capital raising and wealth management to retail credit and regulatory advisory."
+        desc="OMNI Fincon's five service verticals cover every stage of your financial journey — from capital raising and wealth management to insurance protection, real estate advisory, and retail credit."
       >
         <div className="flex flex-wrap justify-center gap-4 mt-8">
           <GlowButton color={G} href="/contact" size="md">
@@ -51,10 +51,10 @@ export default function ServicesHub() {
         <div className="max-w-[1320px] mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { val: "16+",            label: "Financial Services"         },
-              { val: "₹20,000 Cr+",  label: "Structured Financing"       },
-              { val: "1,000+",        label: "Projects Executed"          },
-              { val: "30+",           label: "Sectors Covered"            },
+              { val: "5",             label: "Integrated Service Verticals" },
+              { val: "₹20,000 Cr+", label: "Structured Financing"         },
+              { val: "1,000+",       label: "Projects Executed"            },
+              { val: "0 NPA",        label: "Unmatched Track Record"       },
             ].map((s, i) => (
               <div key={i} className="text-center">
                 <p style={{ fontFamily: FONT_NUM, fontSize: "2rem", fontWeight: 800, color: G, lineHeight: 1, fontVariantNumeric: "tabular-nums", letterSpacing: "-0.02em" }}>{s.val}</p>

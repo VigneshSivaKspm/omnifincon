@@ -1,4 +1,4 @@
-import { G, GOLD, BLUE, PURPLE } from "../../../lib/tokens";
+import { G, GOLD, BLUE, PURPLE, TEAL } from "../../../lib/tokens";
 
 export interface ServiceItem {
   slug: string;
@@ -54,10 +54,10 @@ export const SERVICES_DATA: Record<string, ServiceItem> = {
   },
 
   "wealth-advisory": {
-    slug: "wealth-advisory", title: "Wealth & Risk Advisory", pill: "Wealth Management",
+    slug: "wealth-advisory", title: "Wealth & Asset Management", pill: "Wealth & Asset Management",
     color: BLUE, range: "₹50 L – ₹500 Cr+",
-    tagline: "Comprehensive Wealth Management for HNIs, Family Offices & Corporates.",
-    heroDesc: "OMNI Fincon's Wealth & Risk Advisory practice delivers bespoke portfolio construction, estate planning, insurance advisory, and risk-optimised investment strategies for India's discerning investors.",
+    tagline: "Protecting and Growing Your Legacy.",
+    heroDesc: "OMNI Fincon's Wealth & Asset Management practice delivers bespoke private wealth advisory, alternative investments, legacy planning, and pre-IPO access for UHNIs, Family Offices, and discerning investors across India.",
     stats: [
       { value: "₹2,400 Cr+", label: "Assets Under Advisory" },
       { value: "18%+",        label: "Avg. Portfolio Alpha"   },
@@ -65,14 +65,14 @@ export const SERVICES_DATA: Record<string, ServiceItem> = {
       { value: "12+",         label: "Asset Classes Covered"  },
     ],
     offerings: [
-      { title: "Portfolio Construction & Management", desc: "Asset allocation across equities, fixed income, alternatives, and real assets optimised for risk-adjusted returns." },
-      { title: "Insurance Advisory",                  desc: "Comprehensive life, health, key-man, and liability insurance structuring for individuals and corporates." },
-      { title: "Estate & Succession Planning",        desc: "Trust structuring, will drafting coordination, and generational wealth transfer advisory." },
-      { title: "Alternative Investments",             desc: "Access to AIFs, unlisted equities, pre-IPO opportunities, and structured products for qualified investors." },
-      { title: "Tax-Efficient Structuring",           desc: "Investment structuring through HUFs, family trusts, and holding companies for optimal tax outcomes." },
-      { title: "Risk Management",                     desc: "Comprehensive risk profiling, portfolio stress testing, and hedging strategies using derivatives and insurance." },
-      { title: "NRI Wealth Advisory",                 desc: "Specialised advisory for non-resident Indians covering FEMA compliance, repatriation, and India-centric investments." },
-      { title: "Corporate Surplus Management",        desc: "Efficient deployment of corporate treasury surpluses in short-duration instruments and liquid strategies." },
+      { title: "Private Wealth Advisory",        desc: "Personalised wealth structuring for Ultra-HNIs and Family Offices — covering asset allocation, risk management, and cross-border investments." },
+      { title: "Alternative Investments (AIF)",  desc: "Curated access to Category I, II, and III Alternative Investment Funds across real assets, unlisted equities, and structured credit strategies." },
+      { title: "Legacy & Succession Planning",   desc: "Comprehensive estate planning, trust structuring, will coordination, and generational wealth transfer advisory for promoter families." },
+      { title: "Pre-IPO Opportunities",          desc: "Exclusive access to high-growth pre-IPO equity placements and preferential allotments for qualified institutional and HNI investors." },
+      { title: "Opportunistic Deals",            desc: "Curated, time-sensitive access to high-alpha opportunities across private equity, real estate, and special situations." },
+      { title: "Portfolio Construction",         desc: "Risk-optimised asset allocation across equities, fixed income, real assets, and alternatives guided by in-house macro research." },
+      { title: "Tax-Efficient Structuring",      desc: "Investment structuring through HUFs, family trusts, and holding companies for optimal tax outcomes and compliance." },
+      { title: "NRI Wealth Advisory",            desc: "Specialist advisory for non-resident Indians covering FEMA compliance, repatriation strategies, and India-focused portfolio construction." },
     ],
     process: [
       { step: "01", title: "Wealth Discovery Session",     desc: "Deep-dive financial assessment covering goals, risk tolerance, existing assets, and future liquidity needs." },
@@ -91,10 +91,10 @@ export const SERVICES_DATA: Record<string, ServiceItem> = {
   },
 
   "real-estate-advisory": {
-    slug: "real-estate-advisory", title: "Land & Real Estate Advisory", pill: "Real Estate",
+    slug: "real-estate-advisory", title: "Real Estate Advisory", pill: "Real Estate",
     color: GOLD, range: "₹25 Cr – ₹500 Cr+",
-    tagline: "Expert Land, JV, and Asset Advisory for India's Real Estate Sector.",
-    heroDesc: "OMNI Fincon's Real Estate Advisory practice provides comprehensive guidance on land acquisition, joint venture structuring, title due diligence, and asset monetisation for developers, investors, and corporates.",
+    tagline: "Expert Advisory for Real Estate Capital.",
+    heroDesc: "OMNI Fincon's Real Estate Advisory practice delivers expert capital market solutions, land & asset transactions, project finance structuring, and strategic consulting for developers, investors, and corporates across India.",
     stats: [
       { value: "₹3,200 Cr+", label: "Real Estate Mandates"       },
       { value: "120+",        label: "Land & JV Transactions"     },
@@ -102,14 +102,14 @@ export const SERVICES_DATA: Record<string, ServiceItem> = {
       { value: "10+",         label: "Cities Covered Across India" },
     ],
     offerings: [
-      { title: "Land Acquisition Advisory",   desc: "End-to-end advisory on land sourcing, pricing, due diligence, regulatory clearances, and structured acquisition." },
-      { title: "JV Structuring & Advisory",   desc: "Design of revenue share, profit share, and hybrid JV structures between landowners, developers, and investors." },
-      { title: "Title Due Diligence",         desc: "Coordination of legal title searches, encumbrance clearances, and litigation risk assessment." },
-      { title: "Asset Monetisation",          desc: "Sale-leaseback, rent securitisation, and structured exits for commercial and income-yielding real estate assets." },
-      { title: "Real Estate Fund Raising",    desc: "Debt and equity capital raising for residential, commercial, warehousing, and hospitality projects." },
-      { title: "RERA Advisory",               desc: "Project registration, compliance structuring, and escrow management under RERA regulations." },
-      { title: "Valuation & Feasibility",     desc: "Independent valuation opinions, project feasibility studies, and market analysis for developers and lenders." },
-      { title: "Lease Rental Discounting",    desc: "LRD financing structures against committed lease rentals from AA-rated corporate tenants." },
+      { title: "Real Estate Capital Markets",     desc: "Structured debt and equity fund raising for residential, commercial, warehousing, and hospitality real estate projects." },
+      { title: "Land & Asset Transactions",       desc: "End-to-end advisory on land sourcing, pricing, due diligence, regulatory clearances, and structured acquisition strategies." },
+      { title: "Project Finance & JVs",           desc: "Design of project finance structures and JV arrangements — revenue share, profit share, or hybrid — between landowners, developers, and investors." },
+      { title: "Strategic Consulting",            desc: "Market feasibility studies, project positioning, regulatory navigation, and strategic advisory for real estate developers and investors." },
+      { title: "Lease Rental Discounting (LRD)",  desc: "LRD financing structures against committed lease rentals from AA-rated corporate tenants for immediate liquidity." },
+      { title: "Asset Monetization Strategies",   desc: "Sale-leaseback, rent securitisation, and structured exits for commercial and income-yielding real estate portfolios." },
+      { title: "Title Due Diligence",             desc: "Coordination of legal title searches, encumbrance clearances, and litigation risk assessment for buyers and lenders." },
+      { title: "RERA Advisory",                   desc: "Project registration, compliance structuring, and escrow management under RERA regulations across states." },
     ],
     process: [
       { step: "01", title: "Site & Project Assessment", desc: "Evaluate land parcels or project assets against market benchmarks, approvals, and development potential." },
@@ -128,10 +128,10 @@ export const SERVICES_DATA: Record<string, ServiceItem> = {
   },
 
   "retail-banking": {
-    slug: "retail-banking", title: "Retail Banking & Credit", pill: "Banking & Loans",
+    slug: "retail-banking", title: "Retail Banking", pill: "Banking & Loans",
     color: PURPLE, range: "₹5 L – ₹50 Cr",
-    tagline: "Smart Credit Solutions for Individuals & Businesses Across India.",
-    heroDesc: "OMNI Fincon's Retail Banking vertical simplifies access to the right loan product at the best terms — from personal and home loans to complex business credit structuring for SMEs and corporates.",
+    tagline: "Complete Solutions for Personal Growth.",
+    heroDesc: "OMNI Fincon's Retail Banking vertical provides complete credit solutions — Home Loans, Business Loans, Loan Against Property, and Loan Against Securities — simplifying access to the right product at the best terms across 50+ lenders.",
     stats: [
       { value: "₹800 Cr+", label: "Loan Disbursements Facilitated" },
       { value: "5,000+",    label: "Loan Cases Processed"           },
@@ -139,14 +139,14 @@ export const SERVICES_DATA: Record<string, ServiceItem> = {
       { value: "50+",       label: "Lending Partners"               },
     ],
     offerings: [
-      { title: "Personal Loan",           desc: "Unsecured personal loans up to ₹50L with competitive rates and minimal documentation." },
-      { title: "Business Loan",           desc: "Collateral-free and secured business loans for working capital, expansion, and equipment purchase." },
-      { title: "Home Loan",               desc: "End-to-end home loan advisory including balance transfer optimisation and top-up structuring." },
-      { title: "Loan Against Property",   desc: "Structured LAP solutions leveraging residential, commercial, and industrial property assets." },
-      { title: "Working Capital Loan",    desc: "CC/OD facilities, invoice discounting, and supply chain financing for operational cash needs." },
-      { title: "Mortgage Loan",           desc: "Comprehensive mortgage loan structuring with optimal tenor, rate, and prepayment flexibility." },
-      { title: "Education Loan",          desc: "Domestic and abroad study education loans with moratorium structuring and competitive pricing." },
-      { title: "Credit Structuring",      desc: "Multi-bank credit facility structuring for businesses with complex banking relationship needs." },
+      { title: "Home Loans",              desc: "End-to-end home loan advisory — new purchase, balance transfer optimisation, and top-up structuring across 50+ banks and HFCs." },
+      { title: "Business Loans",          desc: "Collateral-free and secured business loans for working capital, expansion, and equipment purchase at competitive rates." },
+      { title: "Loan Against Property",   desc: "Structured LAP solutions leveraging residential, commercial, and industrial property assets for liquidity or business needs." },
+      { title: "Loan Against Securities", desc: "Liquidity against stocks, mutual funds, bonds, and other securities without liquidating your investment portfolio." },
+      { title: "Credit Structuring",      desc: "Multi-bank credit facility structuring for businesses with complex banking relationship and tenure requirements." },
+      { title: "Balance Transfer",        desc: "Strategic loan balance transfers to lower interest rates and improve cash flow through optimal lender selection." },
+      { title: "Top-Up Loan Advisory",    desc: "Structured top-up and enhancement of existing loan facilities to meet additional capital requirements." },
+      { title: "Credit Score Advisory",   desc: "CIBIL/CRIF profile optimisation strategies to improve credit score and maximise loan eligibility." },
     ],
     process: [
       { step: "01", title: "Loan Requirement Assessment", desc: "Understand loan purpose, quantum, repayment capacity, and existing credit obligations." },
@@ -569,6 +569,43 @@ export const SERVICES_DATA: Record<string, ServiceItem> = {
       { title: "No Prepayment Penalty", desc: "We negotiate prepayment-free structures allowing early loan closure without cost." },
     ],
     industries: ["Business Owners","Self-Employed Professionals","Real Estate Investors","Corporates","Property Owners"],
+  },
+
+  "insurance-risk-management": {
+    slug: "insurance-risk-management", title: "Insurance & Risk Management", pill: "Risk Protection",
+    color: TEAL, range: "Custom Solutions",
+    tagline: "Comprehensive Protection for Business, Legacy & Liability.",
+    heroDesc: "OMNI Fincon's Insurance & Risk Management practice structures bespoke protection solutions — from key-man insurance and complex risk structures to estate protection and corporate liability coverage — for promoters, corporates, and HNI families.",
+    stats: [
+      { value: "500+",     label: "Risk Assessments Completed" },
+      { value: "₹800 Cr+", label: "Total Cover Structured"     },
+      { value: "20+",      label: "Insurance Partners"          },
+      { value: "100%",     label: "Claim Advocacy Rate"         },
+    ],
+    offerings: [
+      { title: "Business Continuity (Key-Man Insurance)", desc: "Critical coverage protecting businesses against the financial impact of losing a key executive, promoter, or director." },
+      { title: "Complex Insurance Structures",             desc: "Multi-layered insurance architectures for large corporates covering liability, property, marine, and operational risks." },
+      { title: "Estate & Legacy Protection",               desc: "Life insurance-based estate planning ensuring smooth wealth transfer, debt protection, and legacy continuity for families." },
+      { title: "Corporate Liability Solutions",            desc: "Directors & Officers (D&O), Errors & Omissions (E&O), and Professional Indemnity coverage for corporate leadership teams." },
+      { title: "Health & Group Insurance Advisory",        desc: "Comprehensive group health, term, and accidental cover structuring for employees and HNI family groups." },
+      { title: "Property & Asset Insurance",               desc: "Structured coverage for commercial properties, industrial plants, and high-value assets against fire, flood, and natural calamities." },
+      { title: "Risk Audit & Advisory",                    desc: "Holistic risk profiling and gap analysis identifying underinsured areas within corporate and individual insurance portfolios." },
+      { title: "Claims Management Support",                desc: "End-to-end claims coordination ensuring prompt and complete settlement across all insurance structures." },
+    ],
+    process: [
+      { step: "01", title: "Risk Discovery",         desc: "Identify all insurable risks across business operations, key personnel, assets, and family estate." },
+      { step: "02", title: "Gap Analysis",           desc: "Review existing insurance coverage and identify critical gaps against current exposures and business growth." },
+      { step: "03", title: "Solution Design",        desc: "Architect optimal insurance structures across multiple insurers to deliver complete, cost-efficient coverage." },
+      { step: "04", title: "Insurer Negotiation",    desc: "Leverage our insurer relationships to negotiate best-in-class premiums, exclusions, and policy terms." },
+      { step: "05", title: "Ongoing Policy Review",  desc: "Annual risk audit and policy review ensuring coverage remains aligned with evolving business and personal needs." },
+    ],
+    why: [
+      { title: "Multi-Insurer Access",        desc: "Access to 20+ leading general and life insurance companies ensuring comprehensive coverage at competitive premiums." },
+      { title: "Specialised Risk Expertise",  desc: "Deep understanding of complex corporate risk landscapes including D&O, business interruption, and liability structures." },
+      { title: "Claims Advocacy",             desc: "Dedicated claims support ensuring fast, complete settlement without policyholders navigating complex insurer processes alone." },
+      { title: "Integrated Wealth Planning",  desc: "Insurance seamlessly integrated with wealth management and estate planning for holistic financial protection." },
+    ],
+    industries: ["Corporate Promoters","High-Net-Worth Families","Manufacturing Companies","IT & Technology","Healthcare Institutions","Real Estate Developers","NBFCs & Financial Institutions"],
   },
 
   "working-capital-loan": {

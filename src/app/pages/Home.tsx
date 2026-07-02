@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router";
 import {
-  TrendingUp, Shield, Building2, CreditCard, CheckCircle2,
+  TrendingUp, Shield, Building2, CreditCard, Umbrella, CheckCircle2,
   ArrowRight, ChevronDown, Phone, Star, BarChart3, Globe,
   Users, Landmark, Clock, ArrowUpRight, Sparkles, DollarSign,
   Target, Award, Handshake, MessageCircle, Zap, Quote,
 } from "lucide-react";
 import {
-  G, GOLD, BLUE, PURPLE, NAVY, NAVY2, DARK, TEXT1, TEXT2,
+  G, GOLD, BLUE, PURPLE, TEAL, NAVY, NAVY2, DARK, TEXT1, TEXT2,
   FONT_SANS, FONT_SERIF, FONT_NUM, OFFICES, PARTNERS,
   SURF_BORDER, CARD_SHADOW, CARD_SHADOW_LG, GREEN_GRAD,
 } from "../../lib/tokens";
@@ -16,17 +16,20 @@ import { RevealWrapper, useScrollReveal, useCounter, Pill, SectionHeader, GlowBu
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
 const SERVICES = [
-  { num: "01", icon: TrendingUp, title: "Investment Banking",      tag: "Capital Markets", color: G,
-    desc: "Fund Raising (Debt & Equity), HNI Funding, M&A Advisory, Project Finance, Structured Finance, Bridge Financing, and SME/MSME Solutions.",
+  { num: "01", icon: TrendingUp, title: "Investment Banking",          tag: "Capital Markets",   color: G,
+    desc: "Fund Raising (Debt & Equity), HNI Funding, M&A Advisory, Corporate Finance Advisory, Project Finance, Structured Finance, Bridge Financing, and SME/MSME.",
     href: "/services/investment-banking" },
-  { num: "02", icon: Shield,     title: "Wealth & Asset Management", tag: "Wealth",        color: BLUE,
-    desc: "Private Wealth Advisory for UHNIs & Family Offices, Alternative Investments (AIF), Pre-IPO Opportunities, and Legacy & Succession Planning.",
+  { num: "02", icon: Shield,     title: "Wealth & Asset Management",   tag: "Wealth & Assets",   color: BLUE,
+    desc: "Private Wealth Advisory for UHNIs & Family Offices, Alternative Investments (AIF), Legacy & Succession Planning, Pre-IPO, and Opportunistic Deals.",
     href: "/services/wealth-advisory" },
-  { num: "03", icon: Building2,  title: "Real Estate Advisory",    tag: "Real Estate",     color: GOLD,
-    desc: "Real Estate Capital Markets, Land & Asset Transactions, Project Finance & JVs, Lease Rental Discounting, and Asset Monetization Strategies.",
+  { num: "03", icon: Umbrella,   title: "Insurance & Risk Management", tag: "Risk Protection",   color: TEAL,
+    desc: "Business Continuity (Key-Man Insurance), Complex Insurance Structures, Estate & Legacy Protection, and Corporate Liability Solutions.",
+    href: "/services/insurance-risk-management" },
+  { num: "04", icon: Building2,  title: "Real Estate Advisory",        tag: "Real Estate",       color: GOLD,
+    desc: "Real Estate Capital Markets, Land & Asset Transactions, Project Finance & JVs, Strategic Consulting, Lease Rental Discounting, and Asset Monetization.",
     href: "/services/real-estate-advisory" },
-  { num: "04", icon: CreditCard, title: "Retail Banking & Credit", tag: "Banking",         color: PURPLE,
-    desc: "Home Loans, Business Loans, Loan Against Property, Loan Against Securities, and comprehensive Credit Structuring solutions.",
+  { num: "05", icon: CreditCard, title: "Retail Banking",              tag: "Banking & Credit",  color: PURPLE,
+    desc: "Home Loans, Business Loans, Loan Against Property, and Loan Against Securities — complete retail credit solutions.",
     href: "/services/retail-banking" },
 ];
 
@@ -255,7 +258,7 @@ function Hero() {
               <h1 style={{ fontFamily: FONT_SERIF, fontSize: "clamp(2.8rem,5.5vw,4.8rem)", fontWeight: 700, lineHeight: 1.08, color: TEXT1, letterSpacing: "-0.02em" }}>
                 Access Capital.{" "}
                 <span style={{
-                  background: `linear-gradient(135deg,${G} 0%,#00C97A 50%,${G} 100%)`,
+                  background: `linear-gradient(135deg,${G} 0%,#4A80E0 50%,${G} 100%)`,
                   WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text",
                 }}>
                   Create Wealth.

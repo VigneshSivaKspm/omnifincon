@@ -7,7 +7,7 @@ const LEADERS = [
     exp: "25+ Years", expertise: "Investment Banking, Debt Syndication, PSU Banking",
     bio: "Former senior banker with State Bank of India and HDFC Bank. Rajesh has personally structured and closed over ₹2,000 Cr in debt and equity mandates across real estate, infrastructure, and manufacturing sectors.",
     credentials: ["Ex-SBI","Ex-HDFC Bank","MBA Finance – IIM Ahmedabad"] },
-  { name: "Priya Menon", title: "Director – Wealth & Risk Advisory", initials: "PM", color: GOLD,
+  { name: "Priya Menon", title: "Director – Wealth & Asset Management", initials: "PM", color: GOLD,
     exp: "20+ Years", expertise: "Wealth Management, Insurance, Estate Planning",
     bio: "A seasoned wealth advisor with prior experience at Kotak Private Banking and Aditya Birla Capital. Priya has managed over ₹1,200 Cr in HNI and family office portfolios.",
     credentials: ["CFP Certified","Ex-Kotak Private Banking","MBA – XLRI Jamshedpur"] },

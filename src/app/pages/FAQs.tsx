@@ -8,7 +8,7 @@ const FAQ_CATEGORIES = [
     label: "General", color: G,
     items: [
       { q: "What is OMNI Fincon?",
-        a: "OMNI Fincon is a boutique investment banking firm operating across Investment Banking, Wealth & Asset Management, Real Estate Advisory, and Retail Banking & Credit. With ₹20,000+ Cr in structured financing, 1,000+ projects executed, and a zero NPA track record, we are one of India's most trusted financial advisory firms." },
+        a: "OMNI Fincon is a boutique investment banking firm operating across five verticals — Investment Banking, Wealth & Asset Management, Insurance & Risk Management, Real Estate Advisory, and Retail Banking. With ₹20,000+ Cr in structured financing, 1,000+ projects executed, and a zero NPA track record, we are one of India's most trusted financial advisory firms." },
       { q: "Where are your offices located?",
         a: "We have offices in Hyderabad (HQ), Surat, Vadodara, and Ahmedabad — enabling us to serve clients across India's major financial and industrial centres with genuine local market intelligence. We are expanding to Bengaluru, Chennai, and Andhra Pradesh in 2026." },
       { q: "Who are your typical clients?",

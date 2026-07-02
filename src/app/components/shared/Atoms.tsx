@@ -236,9 +236,9 @@ export function GlobalStyles() {
       ::-webkit-scrollbar { width: 5px; }
       ::-webkit-scrollbar-track { background: #F4F7FD; }
       ::-webkit-scrollbar-thumb { background: #CBD5DF; border-radius: 3px; }
-      ::-webkit-scrollbar-thumb:hover { background: #00915A50; }
+      ::-webkit-scrollbar-thumb:hover { background: #1351C850; }
 
-      ::selection { background: #00915A20; color: #0B1A2E; }
+      ::selection { background: #1351C820; color: #0B1A2E; }
 
       input::placeholder, textarea::placeholder {
         color: #8BA2BA;
